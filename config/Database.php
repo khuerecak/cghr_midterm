@@ -1,7 +1,7 @@
 <?php
 class Database
 {
-    //Render params 
+ /*   //Render params 
     private $host;
     private $port;
     private $dbname;
@@ -37,7 +37,7 @@ class Database
         }
     }
 
-    /*
+    */
     //Local params 
     private $host = 'localhost';
     private $port = '5432';
@@ -60,5 +60,4 @@ class Database
             }
             return $this->conn;
         }
-*/
 }

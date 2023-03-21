@@ -29,6 +29,6 @@ if (isset($data->category)) {
     //if data is missing, send err message
 } else {
     echo json_encode(
-        array('message' => 'Missing Required Parameters')
+        array('message'=>'Missing Required Parameters')
     );
 }

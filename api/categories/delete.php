@@ -24,10 +24,10 @@ include_once '../../models/Category.php';
   // Delete category
   if($category->delete()) {
     echo json_encode(
-      array('message' => 'Category deleted')
+      array('message'=>'Category deleted')
     );
   } else {
     echo json_encode(
-      array('message' => 'Category not deleted')
+      array('message'=>'Category not deleted')
     );
   }

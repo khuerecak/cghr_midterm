@@ -20,7 +20,7 @@ $author->read_single();
 
 //Create array 
 if ($author->author === false) {
-    echo json_encode(array('message' => 'author_id Not Found'));
+    echo json_encode(array('message'=>'author_id Not Found'));
 } else {
     //Make JSON
     print_r(json_encode($author->author));

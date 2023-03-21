@@ -45,7 +45,7 @@ if($num > 0) {
 
 } else {
     echo json_encode(
-        array('message' => 'No Quotes Found')
+        array('message'=>'No Quotes Found')
     );
 }
 

@@ -28,6 +28,6 @@ if (isset($data->category)) {
     );
 } else {
     echo json_encode(
-        array('message' => 'Missing Required Parameters')
+        array('message'=>'Missing Required Parameters')
     );
 }

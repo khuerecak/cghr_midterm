@@ -42,6 +42,6 @@ if ($num > 0) {
 } else {
   // No Authors
   echo json_encode(
-    array('message' => 'No Authors Found')
+    array('message'=>'No Authors Found')
   );
 }

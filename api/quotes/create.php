@@ -31,6 +31,6 @@ if(isset($data->quote) and isset($data->author_id) and isset($data->category_id)
     );
 } else {
     echo json_encode(
-        array('message' => 'Missing Required Parameters')
+        array('message'=>'Missing Required Parameters')
     );
 }

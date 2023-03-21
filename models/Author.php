@@ -40,6 +40,7 @@ class Author
   {
     // Create query
     $query = 'SELECT
+          id,
           author
         FROM
           ' . $this->table . '
