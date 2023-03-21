@@ -21,11 +21,11 @@ $result = $quote->read();
 $num = $result->rowCount();
 
 //Check for Quotes
-if($num > 0) {
+if ($num > 0) {
     //Quote array
     $quote_arr = array();
 
-    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
 
         $quote_item = array(
@@ -40,10 +40,8 @@ if($num > 0) {
     }
     //turn to JSON and output data
     echo (json_encode($quote_arr));
-
 } else {
     echo json_encode(
-        array('message'=>'No Quotes Found')
+        array('message' => 'No Quotes Found')
     );
 }
-

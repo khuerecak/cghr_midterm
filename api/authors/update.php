@@ -19,15 +19,15 @@ $data = json_decode(file_get_contents("php://input"));
 
 //Update author
 if (isset($data->author)) {
-     // Set ID to UPDATE
+    // Set ID to UPDATE
     $author->id = $data->id;
     $author->author = $data->author;
     $author->update();
     echo json_encode(
-        array("id"=>$author->id, "author"=>$author->author)
+        array("id" => $author->id, "author" => $author->author)
     );
 } else {
     echo json_encode(
-        array('message'=>'Missing Required Parameters')
+        array('message' => 'Missing Required Parameters')
     );
 }

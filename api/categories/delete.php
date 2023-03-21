@@ -8,26 +8,26 @@ header('Access-Control-Allow-Headers: Access-Control-Allow-Headers, Content-Type
 include_once '../../config/Database.php';
 include_once '../../models/Category.php';
 
-  // Instantiate DB & connect
-  $database = new Database();
-  $db = $database->connect();
+// Instantiate DB & connect
+$database = new Database();
+$db = $database->connect();
 
-  // Instantiate category object
-  $category = new Category($db);
+// Instantiate category object
+$category = new Category($db);
 
-  // Get raw posted data
-  $data = json_decode(file_get_contents("php://input"));
+// Get raw posted data
+$data = json_decode(file_get_contents("php://input"));
 
-  // Set ID to UPDATE
-  $category->id = $data->id;
+// Set ID to UPDATE
+$category->id = $data->id;
 
-  // Delete category
-  if($category->delete()) {
-    echo json_encode(
-      array("id"=>$category->id)
-    );
-  } else {
-    echo json_encode(
-      array('message'=>'Category not deleted')
-    );
-  }
+// Delete category
+if ($category->delete()) {
+  echo json_encode(
+    array("id" => $category->id)
+  );
+} else {
+  echo json_encode(
+    array('message' => 'Category not deleted')
+  );
+}

@@ -20,12 +20,12 @@ $quote = new Quote($db);
 $data = json_decode(file_get_contents("php://input"));
 
 
-if(! isset($data->quote) or ! isset($data->author_id) or ! isset($data->category_id)) {
-    echo json_encode(
-        array('message'=>'Missing Required Parameters')
-    );
-    exit();
-}
+            if (!isset($data->quote) or !isset($data->author_id) or !isset($data->category_id)) {
+                echo json_encode(
+                    array('message' => 'Missing Required Parameters')
+                );
+                exit();
+            }
 
 //Set ID to update
 $quote->id = $data->id;
@@ -34,12 +34,12 @@ $quote->author_id = $data->author_id;
 $quote->category_id = $data->category_id;
 
 //Update Category
-if($quote->update()) {
-    echo json_encode(
-        array("id"=>$quote->id,"quote"=>$quote->quote, "author_id"=>$quote->author_id, "category_id"=>$quote->category_id)
-    );
-} else {
-    echo json_encode(
-        array('message'=>'No Quotes Found')
-    );
-}
+            if ($quote->update()) {
+                echo json_encode(
+                    array("id" => $quote->id, "quote" => $quote->quote, "author_id" => $quote->author_id, "category_id" => $quote->category_id)
+                );
+            } else {
+                echo json_encode(
+                    array('message' => 'No Quotes Found')
+                );
+            }

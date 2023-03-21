@@ -24,11 +24,11 @@ if (isset($data->author)) {
     $author->author = $data->author;
     $author->create();
     echo json_encode(
-        array("id"=> $db->lastInsertId(), "author"=>$author->author)
+        array("id" => $db->lastInsertId(), "author" => $author->author)
     );
     //if data is missing, send err message
 } else {
     echo json_encode(
-        array('message'=>'Missing Required Parameters')
+        array('message' => 'Missing Required Parameters')
     );
 }
