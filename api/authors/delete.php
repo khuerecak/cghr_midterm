@@ -23,7 +23,7 @@ include_once '../../models/Author.php';
 
   // Delete author
   if($author->delete()) {
-    $author->id = $data->id;
+    echo json_encode(array("id"=>$author->id));
   } else {
     echo json_encode(
       array('message'=>'author not deleted')
