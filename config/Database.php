@@ -36,8 +36,8 @@ class Database
             }
         }
     }
-
-   /*
+/*
+   
     //Local params 
     private $host = 'localhost';
     private $port = '5432';

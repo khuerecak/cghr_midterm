@@ -40,12 +40,12 @@ class Author
   {
     // Create query
     $query = 'SELECT
-          id,
-          author
+          a.id,
+          a.author
         FROM
           ' . $this->table . '
-      WHERE 
-      id = ?';
+      a WHERE 
+      a.id = ?';
 
     //Prepare statement
     $stmt = $this->conn->prepare($query);
