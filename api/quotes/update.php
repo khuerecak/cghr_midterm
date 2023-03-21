@@ -6,8 +6,8 @@ header('Access-Control-Allow-Methods: PUT');
 header('Access-Control-Allow-Headers: Access-Control-Allow-Methods, Content-Type, Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
 //required files
-require('../../config/Database.php');
-require('../../models/Quote.php');
+include_once('../../config/Database.php');
+include_once('../../models/Quote.php');
 
 //Database
 $database = new Database();

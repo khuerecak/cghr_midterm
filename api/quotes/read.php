@@ -4,8 +4,8 @@ header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
 //required files
-require('../../config/Database.php');
-require('../../models/Quote.php');
+include_once('../../config/Database.php');
+include_once('../../models/Quote.php');
 
 //Database
 $database = new Database();
