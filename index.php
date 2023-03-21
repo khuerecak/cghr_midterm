@@ -1,1 +1,1 @@
-<h1>Crystal Huereca-Retana, Spring 2023, Back End Web Dev I - INF653, Midterm Project  👽  </h1>
+<h1>Crystal Huereca-Retana, Spring 2023, Back End Web Dev I - INF653, Midterm Project 👽</h1>
