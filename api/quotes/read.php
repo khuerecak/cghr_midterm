@@ -3,7 +3,7 @@
 header('Access-Control-Allow-Origin: *');
 header('Content-Type: application/json');
 
-//required files
+
 include_once('../../config/Database.php');
 include_once('../../models/Quote.php');
 
@@ -24,7 +24,6 @@ $num = $result->rowCount();
 if($num > 0) {
     //Quote array
     $quote_arr = array();
-    //$quote_arr['data'] = array();
 
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
         extract($row);
@@ -39,7 +38,6 @@ if($num > 0) {
         //Push data
         array_push($quote_arr, $quote_item);
     }
-
     //turn to JSON and output data
     echo (json_encode($quote_arr));
 
@@ -49,4 +47,3 @@ if($num > 0) {
     );
 }
 
-?>

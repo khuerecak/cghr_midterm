@@ -15,7 +15,7 @@ $db = $database->connect();
 //Instantiate quote object
 $quote = new Quote($db);
 
-//Get raw posted data
+//Get raw quotes data
 $data = json_decode(file_get_contents("php://input"));
 
 // create quote based on whether author and category id's are provided 
