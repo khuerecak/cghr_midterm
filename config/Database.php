@@ -1,7 +1,7 @@
 <?php
 class Database
 {
- /*   //Render params 
+ //Render params 
     private $host;
     private $port;
     private $dbname;
@@ -37,8 +37,8 @@ class Database
         }
     }
 
-    */
-    //Local params 
+   
+    /*/Local params 
     private $host = 'localhost';
     private $port = '5432';
     private $dbname = 'quotesdb';
@@ -59,5 +59,5 @@ class Database
                 echo 'Connection Error: ' . $e->getMessage();
             }
             return $this->conn;
-        }
+        }*/
 }
